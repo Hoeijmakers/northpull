@@ -71,24 +71,16 @@ P = []
 h = []
 for i in range(1,len(data)-8):
     times.append(f'{yy}-{mm}-{dd}T{str(data[i][1].split()[0])}:00:00')
-    t = Time(times, format='isot', scale='utc')
+    t = Time(times, format='isot', scale='utc')#This here moves the scraped times to utc.
     h.append(float(str(data[i][1].split()[0])))
     P.append(float(data[i][-1].replace(',','.')))
 
-# print(np.array(P))
 data_clean = np.array([t.mjd,np.array(P)])
-
 
 try:
     data_in = np.load('data.npy')
     data_out = np.hstack((data_in, data_clean))
 except FileNotFoundError:
-    # if the file doesn't exist, create an empty array
     data_out = data_clean
 
-# save the concatenated data to file
 np.save('data.npy', data_out)
-
-# plt.plot(h,P)
-# plt.title(f'{yy}-{mm}-{dd}')
-# plt.show()
