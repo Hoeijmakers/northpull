@@ -1,3 +1,11 @@
-# northpull
+# Northpull:
 
-Pulling things from up North.
+## Pulling things from up North.
+
+
+
+### Requirements:
+- Python 3
+- Numpy
+- Selenium
+- Astropy
