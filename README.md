@@ -9,3 +9,5 @@
 - Numpy
 - Selenium
 - Astropy
+- Google Chrome
+- Google Chrome webdriver (https://chromedriver.chromium.org/downloads)
