@@ -10,4 +10,4 @@
 - Selenium
 - Astropy
 - Google Chrome
-- Google Chrome webdriver (https://chromedriver.chromium.org/downloads)
+- Google Chrome webdriver (sudo apt-get install chromium-chromedriver)
